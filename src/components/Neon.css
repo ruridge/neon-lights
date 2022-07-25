@@ -1,0 +1,120 @@
+:root {
+  --main-bg-color: hsl(242 40% 5%);
+  /*   --neon-tube-color: 0 0% 80%; */
+
+  --neon-fluorescent-tube: 226 100% 90%;
+  --neon-fluorescent-glow: 237 100% 100%;
+
+  --neon-red-tube: 0 100% 50%;
+  --neon-red-glow: 17 100% 95%;
+  --neon-green-tube: 126 100% 50%;
+  --neon-green-glow: 137 100% 95%;
+  --neon-blue-tube: 226 100% 50%;
+  --neon-blue-glow: 237 100% 95%;
+
+  --neon-50: hsl(var(--neon-fluorescent-tube));
+  --neon-95: hsl(var(--neon-fluorescent-glow));
+}
+
+.Neon {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background: none;
+  text-decoration: none;
+  color: var(--neon-95);
+  border: 0.16em solid var(--neon-95);
+  border-radius: 0.3em;
+  padding: 0.2em 0.4em;
+  text-shadow: var(--neon-50) 0 0 8px;
+  box-shadow: inset 0 0 8px var(--neon-50), 0 0 8px var(--neon-50);
+  filter: drop-shadow(0 0 14px var(--neon-50));
+  /*   animation: blink linear infinite 3s; */
+
+  /*  to position the shadow  */
+  position: relative;
+}
+
+.Neon::before {
+  content: "";
+  /*   display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neon-50);
+  opacity: 0.4;
+  filter: blur(1.8em);
+  animation: 6s linear infinite both opacity;
+}
+
+.Neon::after {
+  content: "";
+  /*   display: none; */
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neon-50);
+  opacity: 0.4;
+  filter: blur(0.8em);
+  transform: perspective(4.3em) rotateX(74deg);
+  animation: 6s linear infinite both opacity;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 0.33;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.33;
+  }
+  78% {
+    opacity: 0.4;
+  }
+  79% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  81% {
+    opacity: 0.2;
+  }
+  82% {
+    opacity: 0.3;
+  }
+  83% {
+    opacity: 0.4;
+  }
+  92% {
+    opacity: 0.3;
+  }
+  92.5% {
+    opacity: 0.4;
+  }
+}
+
+.Neon-red {
+  --neon-50: hsl(var(--neon-red-tube));
+  --neon-95: hsl(var(--neon-red-glow));
+}
+
+.Neon-green {
+  --neon-50: hsl(var(--neon-green-tube));
+  --neon-95: hsl(var(--neon-green-glow));
+}
+
+.Neon-blue {
+  --neon-50: hsl(var(--neon-blue-tube));
+  --neon-95: hsl(var(--neon-blue-glow));
+}
