@@ -18,7 +18,7 @@
 
 .Neon {
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-  font-size: 10rem;
+  font-size: 3rem;
   text-transform: uppercase;
   display: inline-block;
   background: none;
@@ -38,7 +38,6 @@
 
 .Neon::before {
   content: "";
-  /*   display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -52,7 +51,6 @@
 
 .Neon::after {
   content: "";
-  /*   display: none; */
   position: absolute;
   top: 120%;
   left: 0;

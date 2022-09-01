@@ -1,17 +1,22 @@
 {
+  "name": "neon-lights",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react-refresh": "^1.3.1",
-    "prop-types": "^15.7.2",
-    "vite": "^2.3.5"
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "prop-types": "^15.8.1",
+    "vite": "^3.0.9"
   }
 }
