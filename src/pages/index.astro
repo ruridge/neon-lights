@@ -2,6 +2,7 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component front matter". It never runs in the browser.
 console.log("This runs in your terminal, not the browser!");
+import { Neon } from "../components/Neon";
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
@@ -9,7 +10,12 @@ console.log("This runs in your terminal, not the browser!");
 <html>
   <body>
     <h1>Neon Lights</h1>
-    <p>Put lights here...</p>
+    <div class="red">
+      <Neon color="default">Neon 理想</Neon>
+      <Neon color="red">Neon 紅</Neon>
+      <Neon color="green">Neon 綠</Neon>
+      <Neon color="blue">Neon 藍</Neon>
+    </div>
     <style>
       html {
         background-color: #232323;
